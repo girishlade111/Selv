@@ -24,22 +24,25 @@ export const HomePage: React.FC = () => {
           {profile.eyebrow}
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-3.5">
-          {/* Abstract monogram brand emblem */}
-          <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-gradient-to-br from-amber-400/20 via-white/5 to-white/10 border border-white/15 p-1 flex items-center justify-center shadow-xl relative overflow-hidden group">
-            <div className="w-full h-full rounded-xl bg-black/60 flex items-center justify-center backdrop-blur-md">
-              <span className="text-2xl font-black tracking-tight text-white group-hover:scale-110 transition-transform duration-300">
-                GL
-              </span>
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/10 to-transparent pointer-events-none" />
+        {/* Photo and Name Header Row */}
+        <div className="flex items-center justify-center gap-5 sm:gap-6 text-left my-2">
+          {/* Profile photo with squircle rounding, hairline border & soft shadow */}
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl sm:rounded-3xl overflow-hidden shrink-0 border border-white/15 shadow-2xl relative group bg-neutral-900">
+            <img
+              src="/images/profile.png"
+              alt={profile.name}
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              loading="eager"
+            />
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl pointer-events-none" />
           </div>
 
           <div className="space-y-1">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              {profile.name}
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-[1.1]">
+              Girish <br />
+              Lade
             </h1>
-            <p className="text-xs sm:text-sm text-white/50 font-medium">
+            <p className="text-xs sm:text-sm text-white/50 font-medium pt-0.5">
               {profile.location}
             </p>
           </div>
@@ -187,9 +190,11 @@ export const HomePage: React.FC = () => {
 
         <div className="flex items-center justify-between pt-2 border-t border-white/10">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-white/10 border border-white/15 flex items-center justify-center font-bold text-xs text-amber-300">
-              GL
-            </div>
+            <img
+              src="/images/profile.png"
+              alt={philosophy.author}
+              className="w-10 h-10 rounded-full object-cover border border-white/20 shadow-md shrink-0"
+            />
             <div className="text-left">
               <p className="text-xs font-bold text-white">{philosophy.author}</p>
               <p className="text-[11px] text-white/50">{philosophy.role}</p>

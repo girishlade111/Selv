@@ -26,23 +26,23 @@ export const AboutPage: React.FC = () => {
 
   return (
     <div className="space-y-4 sm:space-y-5">
-      {/* 1. Header Card with Title */}
-      <div className="glass-panel rounded-[28px] sm:rounded-[32px] overflow-hidden relative">
-        <div className="h-64 sm:h-76 w-full relative flex items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-950 to-black">
-          {/* Subtle geometric grid & abstract visual */}
-          <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
-
-          {/* Central artistic initials emblem */}
-          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-amber-400/20 via-white/5 to-white/10 border border-white/20 p-2 flex items-center justify-center shadow-2xl backdrop-blur-xl">
-            <span className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-              GL
-            </span>
-          </div>
+      {/* 1. Header Card with Portrait Photo */}
+      <div className="glass-panel rounded-[28px] sm:rounded-[32px] overflow-hidden relative group">
+        <div className="h-72 sm:h-96 w-full relative bg-neutral-900">
+          <img
+            src="/images/profile.png"
+            alt={profile.name}
+            className="w-full h-full object-cover object-top sm:object-center group-hover:scale-105 transition-transform duration-700"
+            loading="eager"
+          />
 
           {/* Top BackButton */}
           <div className="absolute top-6 left-6 z-10">
             <BackButton to="/" />
           </div>
+
+          {/* Dark gradient overlay for bottom typography */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/20" />
 
           {/* Bottom Title & Headline */}
           <div className="absolute bottom-6 left-6 right-6 z-10 space-y-1">
